@@ -4,7 +4,7 @@ include("script/campaign/templates.js");
 
 const NEW_PARADIGM_RES = [
 	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
-	"R-Sys-Engineering01", "R-Wpn-MG-Damage03", "R-Wpn-MG-ROF01", "R-Wpn-Cannon-Damage02",
+	"R-Sys-Engineering01", "R-Wpn-MG-Damage04", "R-Wpn-MG-ROF01", "R-Wpn-Cannon-Damage02",
 	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
 	"R-Defense-WallUpgrade03","R-Struc-Materials03", "R-Vehicle-Engine02",
 	"R-Struc-RprFac-Upgrade02", "R-Wpn-Rocket-Damage01", "R-Wpn-Rocket-ROF03",
@@ -103,12 +103,12 @@ function sendTransport()
 	if (lastHeavy)
 	{
 		lastHeavy = false;
-		templates = [ cTempl.nppod, cTempl.nphmg, cTempl.npmrl, cTempl.npsmc, cTempl.npltat ];
+		templates = [ cTempl.nppod, cTempl.nphmg, cTempl.npmrl, cTempl.npltat ];
 	}
 	else
 	{
 		lastHeavy = true;
-		templates = [ cTempl.npsmct, cTempl.npmor, cTempl.npsmc, cTempl.npmmct, cTempl.npmrl, cTempl.nphmg, cTempl.npsbb, cTempl.npltat ];
+		templates = [ cTempl.npsmct, cTempl.npmor, cTempl.npsmc, cTempl.npmmct, cTempl.npsbb ];
 	}
 
 	var droids = [];
@@ -133,11 +133,7 @@ function sendTransport()
 
 function startTransporterAttack()
 {
-	let attackTime = camMinutesToMilliseconds(2.2);
-	if (difficulty >= HARD)
-	{
-		attackTime = camChangeOnDiff(camMinutesToMilliseconds(2.2));
-	}
+	let attackTime = camChangeOnDiff(camMinutesToMilliseconds(1.5));
 	sendTransport();
 	setTimer("sendTransport", attackTime);
 }
@@ -166,7 +162,7 @@ function eventStartLevel()
 		setNoGoArea(ph.x, ph.y, ph.x2, ph.y2, i + 2);
 	}
 
-	camSetMissionTime(camChangeOnDiff(camMinutesToSeconds(30)));
+	setMissionTime(camChangeOnDiff(camMinutesToSeconds(25)));
 	camPlayVideos({video: "MB1CA_MSG", type: CAMP_MSG});
 
 	// first transport after 10 seconds

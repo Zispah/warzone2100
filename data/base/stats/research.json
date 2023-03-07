@@ -2050,9 +2050,11 @@
 	"R-Sys-MobileRepairTurret01": {
 		"iconID": "IMAGE_RES_SYSTEMTECH",
 		"id": "R-Sys-MobileRepairTurret01",
-		"keyTopic": 1,
 		"msgName": "RES_REPTU1",
 		"name": "Mobile Repair Turret",
+                "requiredResearch": [
+			"R-Sys-Engineering01"
+		],
 		"researchPoints": 900,
 		"researchPower": 18,
 		"resultComponents": [
@@ -2389,14 +2391,14 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "CANNON",
 				"parameter": "Damage",
-				"value": 30
+				"value": 40
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "CANNON",
 				"parameter": "RadiusDamage",
-				"value": 30
+				"value": 40
 			}
 		],
 		"statID": "Cannon1Mk1",
@@ -2447,14 +2449,14 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "CANNON",
 				"parameter": "Damage",
-				"value": 30
+				"value": 35
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "CANNON",
 				"parameter": "RadiusDamage",
-				"value": 30
+				"value": 35
 			}
 		],
 		"statID": "Cannon1Mk1",
@@ -2538,7 +2540,7 @@
 		"msgName": "RES_W_FL_R1",
 		"name": "High-Pressure Gas Container",
 		"requiredResearch": [
-			"R-Wpn-Flamer-Damage01"
+			"R-Wpn-Flamer-Damage02"
 		],
 		"researchPoints": 1000,
 		"researchPower": 85,
@@ -2548,7 +2550,7 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "FLAME",
 				"parameter": "MaxRange",
-				"value": 20
+				"value": 25
 			}
 		],
 		"statID": "Flame1Mk1",
@@ -2703,7 +2705,7 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "MACHINE GUN",
 				"parameter": "Damage",
-				"value": 20
+				"value": 30
 			}
 		],
 		"statID": "MG1Mk1",
@@ -2716,7 +2718,7 @@
 		"name": "APDSB MG Bullets",
 		"requiredResearch": [
 			"R-Wpn-MG-Damage01",
-			"R-Wpn-MG2Mk1"
+                        "R-Wpn-MG2Mk1"
 		],
 		"researchPoints": 1200,
 		"researchPower": 37,
@@ -2726,7 +2728,7 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "MACHINE GUN",
 				"parameter": "Damage",
-				"value": 20
+				"value": 30
 			}
 		],
 		"statID": "MG1Mk1",
@@ -2748,7 +2750,7 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "MACHINE GUN",
 				"parameter": "Damage",
-				"value": 20
+				"value": 10
 			}
 		],
 		"statID": "MG1Mk1",
@@ -2761,7 +2763,7 @@
 		"keyTopic": 1,
 		"name": "APDSB MG Bullets Mk3",
 		"requiredResearch": [
-			"R-Wpn-MG-ROF01"
+			"R-Wpn-MG-Damage03"
 		],
 		"researchPoints": 3600,
 		"researchPower": 112,
@@ -2771,7 +2773,7 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "MACHINE GUN",
 				"parameter": "Damage",
-				"value": 20
+				"value": 40
 			}
 		],
 		"statID": "MG1Mk1",
@@ -2824,14 +2826,13 @@
 	"R-Wpn-MG2Mk1": {
 		"iconID": "IMAGE_RES_WEAPONTECH",
 		"id": "R-Wpn-MG2Mk1",
-		"keyTopic": 1,
 		"msgName": "RES_MG2MK1",
 		"name": "Twin Machinegun",
 		"redComponents": [
 			"MG1Mk1"
 		],
 		"requiredResearch": [
-			"R-Wpn-MG-Damage01"
+			"R-Wpn-MG-ROF01"
 		],
 		"researchPoints": 1200,
 		"researchPower": 37,
@@ -2850,8 +2851,7 @@
 			"MG2Mk1"
 		],
 		"requiredResearch": [
-			"R-Wpn-MG2Mk1",
-			"R-Wpn-MG-Damage02"
+			"R-Wpn-MG2Mk1"
 		],
 		"researchPoints": 2400,
 		"researchPower": 75,
@@ -2907,21 +2907,21 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "MORTARS",
 				"parameter": "Damage",
-				"value": 30
+				"value": 45
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "MORTARS",
 				"parameter": "RadiusDamage",
-				"value": 30
+				"value": 45
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "MORTARS",
 				"parameter": "RepeatDamage",
-				"value": 30
+				"value": 45
 			}
 		],
 		"statID": "Mortar1Mk1",
@@ -3016,14 +3016,14 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "MORTARS",
 				"parameter": "FirePause",
-				"value": -10
+				"value": -15
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "MORTARS",
 				"parameter": "ReloadTime",
-				"value": -10
+				"value": -15
 			}
 		],
 		"statID": "Mortar1Mk1",
@@ -3138,14 +3138,14 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "ROCKET",
 				"parameter": "Damage",
-				"value": 35
+				"value": 55
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "ROCKET",
 				"parameter": "RadiusDamage",
-				"value": 35
+				"value": 55
 			}
 		],
 		"statID": "Rocket-Pod",
@@ -3184,7 +3184,6 @@
 	"R-Wpn-Rocket-Damage03": {
 		"iconID": "IMAGE_RES_WEAPONTECH",
 		"id": "R-Wpn-Rocket-Damage03",
-		"keyTopic": 1,
 		"name": "HE Mini-Rockets Mk3",
 		"requiredResearch": [
 			"R-Wpn-Rocket-Damage02"
@@ -3304,7 +3303,7 @@
 		"msgName": "RES_W_RK_LTAT1",
 		"name": "Lancer AT Rocket",
 		"requiredResearch": [
-			"R-Wpn-Rocket05-MiniPod"
+			"R-Wpn-Rocket-Damage03"
 		],
 		"researchPoints": 3600,
 		"researchPower": 112,
@@ -3484,8 +3483,7 @@
 		"id": "R-Wpn-RocketSlow-Damage02",
 		"name": "HEAT Rocket Warhead Mk2",
 		"requiredResearch": [
-			"R-Wpn-RocketSlow-Damage01",
-			"R-Wpn-Rocket-Damage02"
+			"R-Wpn-RocketSlow-Damage01"
 		],
 		"researchPoints": 3600,
 		"researchPower": 112,
@@ -3495,14 +3493,14 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "SLOW ROCKET",
 				"parameter": "Damage",
-				"value": 25
+				"value": 20
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "SLOW ROCKET",
 				"parameter": "RadiusDamage",
-				"value": 25
+				"value": 20
 			}
 		],
 		"statID": "Rocket-LtA-T",
@@ -3525,14 +3523,14 @@
 				"filterParameter": "ImpactClass",
 				"filterValue": "SLOW ROCKET",
 				"parameter": "Damage",
-				"value": 25
+				"value": 30
 			},
 			{
 				"class": "Weapon",
 				"filterParameter": "ImpactClass",
 				"filterValue": "SLOW ROCKET",
 				"parameter": "RadiusDamage",
-				"value": 25
+				"value": 30
 			}
 		],
 		"statID": "Rocket-LtA-T",
@@ -5689,10 +5687,10 @@
 	"R-Wpn-MG-Damage05": {
 		"iconID": "IMAGE_RES_WEAPONTECH",
 		"id": "R-Wpn-MG-Damage05",
+                "keyTopic": 1,
 		"msgName": "RES_W_MG_D5",
 		"name": "Tungsten-Tipped MG Bullets",
 		"requiredResearch": [
-			"R-Wpn-MG-ROF02",
 			"R-Wpn-MG-Damage04"
 		],
 		"researchPoints": 4800,
@@ -5758,11 +5756,11 @@
 	"R-Wpn-MG-ROF02": {
 		"iconID": "IMAGE_RES_WEAPONTECH",
 		"id": "R-Wpn-MG-ROF02",
-		"keyTopic": 1,
 		"msgName": "RES_W_MG_ROF2",
 		"name": "Rapid Fire Chaingun Upgrade",
 		"requiredResearch": [
-			"R-Wpn-MG-ROF01"
+			"R-Wpn-MG-ROF01",
+                        "R-Wpn-MG-Damage04"
 		],
 		"researchPoints": 4800,
 		"researchPower": 150,

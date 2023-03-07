@@ -304,7 +304,7 @@ function eventStartLevel()
 
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
-	camSetMissionTime(camMinutesToSeconds(5));
+	setMissionTime(camMinutesToSeconds(5));
 	enableResearch("R-Sys-Resistance", CAM_HUMAN_PLAYER);
 
 	camCompleteRequiredResearch(NEXUS_RES, NEXUS);

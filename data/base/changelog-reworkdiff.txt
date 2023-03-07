@@ -1,0 +1,89 @@
+Changes of reworkdiff-alphacam-1.0 compared to camBalance:
+
+----------------------------------------------------------
+
+There are currently no changes directly targeted for Beta
+campaign.
+
+-- Scavenger structure changes:
+The scavenger gun towers, scavenger walls, and scavenger
+flamer towers are now much more fragile.
+
+-- Scavenger weapon changes:
+The scavenger MG is now similar to original. The scavenger
+TMG and HMG is saved for Hard and Insane difficulties. On
+Hard and Insane the scavenger tower MG also gets upgraded.
+Scavenger flamer towers now has a lower range than the MG
+and has more direct damage but less periodical damage.
+
+Scavenger structures might look weird when they get
+upgraded.
+
+-- Bunker changes:
+All weapons except flamers and bunker busters are now more
+than twice as effective against bunkers. Flamers and
+bunker busters are now weaker against bunkers.
+
+Important: "Structure" in this changelog always excludes
+bunkers.
+
+-- Flamer changes:
+Flamers now has a higher range and a higher projectile
+flight speed. They now have more direct damage but less
+periodical damage. They are now slightly weaker against
+structures. (A reminder that "structure" excludes bunkers)
+
+-- Tech placement changes:
+The first scavenger base in Alpha 1 restores the
+traditional MG damage upgrade. Engineering is placed in
+the third base which now unlocks the repair turret.
+
+Chaingun upgrade is now placed in the TMG's original
+location and now unlocks TMG. The flamer range upgrade and
+the second flamer damage upgrade is now placed in the same
+artifact as the HMG.
+
+Lancer is moved to Alpha 8.
+
+-- Power changes:
+The starting power in Hard and Insane difficulty is now
+much higher, but don't get fooled, you better prepare
+because the next missions are hazardous...
+
+-- camChangeOnDiff changes:
+This function mainly affects timers and enemy factory
+production rates. The higher the value it returns the
+easier the campaign gets. The values for easier
+difficulties are reduced for it's originally too much,
+while the values for higher difficulties are also reduced
+to make them differ more to Normal.
+
+-- Bunker buster changes:
+Bunker busters is what breaks the difficulties of Alpha 6
+onwards in camBalance. Because of that, they are now
+weaker against structures but stronger against units.
+
+-- Cannon changes:
+Cannons now have a reasonable fire rate with a higher
+damage per shot to compensate. Medium and heavy cannons
+are now useful for they're now stronger and lighter.
+All cannons are now better against structures and cyborgs.
+
+-- Rocket changes:
+The lancer is now highly similar to the original. To
+balance, all other weapons are now stronger.
+
+-- MRA changes:
+The MRA is too similar to Bombard in camBalance, so they
+now have more than twice the original fire rate but a
+range barely higher than direct fire weapons. It's now the
+artillery with the highest DPS until the Pepperpot.
+
+-- MG upgrade changes:
+The first, second and fourth MG damage upgrade are now
+more effective while the third MG damage upgrade is
+weaker. Rapid fire chaingun upgrade is moved from Beta 1
+to Alpha 8.
+
+There are also many minor changes but the above is all you
+need to know about the mod. Have fun! :)

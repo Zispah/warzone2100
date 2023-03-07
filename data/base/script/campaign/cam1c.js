@@ -194,23 +194,19 @@ function eventStartLevel()
 		setNoGoArea(ph.x, ph.y, ph.x2, ph.y2, i + 1);
 	}
 
-	if (difficulty === HARD)
-	{
-		camSetMissionTime(camMinutesToSeconds(100));
-	}
-	else if (difficulty === INSANE)
-	{
-		camSetMissionTime(camMinutesToSeconds(90));
-	}
-	else
-	{
-		camSetMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
-	}
+	setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
 
 	setReinforcementTime(-1);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
 	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
 	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
+
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaBunker", "A0BaBaBunkerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDHeavy", 7);
+	}
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);

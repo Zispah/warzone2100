@@ -40,7 +40,7 @@ const ALPHA_RESEARCH_NEW = [
 	// 7
 
 	// 8
-	"R-Vehicle-Metals01", "R-Vehicle-Metals02", "R-Wpn-MG-Damage04", "R-Wpn-Rocket02-MRL",
+	"R-Vehicle-Metals01", "R-Vehicle-Metals02", "R-Wpn-MG-Damage04", "R-Wpn-MG-ROF02", "R-Wpn-Rocket02-MRL",
 	"R-Wpn-Rocket-Damage03", "R-Wpn-Mortar02Hvy", "R-Wpn-Mortar-Damage03", "R-Wpn-Cannon-Damage03",
 	"R-Wpn-RocketSlow-Damage02", "R-Vehicle-Body11", "R-Defense-MRL", "R-Defense-HvyMor",
 
@@ -82,7 +82,7 @@ const PLAYER_RES_BETA = [
 const BETA_RESEARCH_NEW = [
 	// 1
 	"R-Sys-Engineering02", "R-Sys-Sensor-Upgrade01", "R-Wpn-AAGun-Damage03",
-	"R-Wpn-Cannon-Damage04", "R-Wpn-MG-ROF02", "R-Wpn-Rocket-Damage04",
+	"R-Wpn-Cannon-Damage04", "R-Wpn-Rocket-Damage04",
 	"R-Defense-WallUpgrade06", "R-Sys-CBSensor-Tower01", "R-Wpn-AAGun-ROF02",
 	"R-Wpn-Cannon-Accuracy02", "R-Wpn-MG-Damage05",
 	"R-Wpn-RocketSlow-Damage04", "R-Struc-Materials06", "R-Sys-CBSensor-Turret01",

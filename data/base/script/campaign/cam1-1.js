@@ -3,7 +3,7 @@ include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 
 const SCAVENGER_RES = [
-	"R-Wpn-Flamer-Damage01", "R-Wpn-Flamer-Range01", "R-Wpn-MG-Damage02", "R-Wpn-MG-ROF01",
+	"R-Wpn-Flamer-Damage01", "R-Wpn-MG-Damage01",
 ];
 
 //Ambush player from scav base - triggered from middle path
@@ -112,6 +112,12 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
 
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerTwin", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDTwin", 7);
+	}
+
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.triketwin, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggytwin, SCAV_7);
@@ -120,7 +126,7 @@ function eventStartLevel()
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
 	camSetArtifacts({
-		"scavFactory1": { tech: "R-Wpn-MG3Mk1" }, //Heavy machine gun
+		"scavFactory1": { tech: ["R-Wpn-MG3Mk1", "R-Wpn-Flamer-Damage02"] }, //Heavy machine gun
 	});
 
 	camSetFactories({

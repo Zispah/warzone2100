@@ -43,7 +43,7 @@ function getDroidsForNPLZ(args)
 
 	if (useHeavyReinforcement)
 	{
-		var artillery = [cTempl.npmor];
+		var artillery = [cTempl.npmorb];
 		var other = [cTempl.npmmct];
 		if (camRand(2) > 0)
 		{
@@ -58,7 +58,7 @@ function getDroidsForNPLZ(args)
 	}
 	else
 	{
-		unitTemplates = [cTempl.nppod, cTempl.npmrl, cTempl.nphmgt];
+		unitTemplates = [cTempl.npltat, cTempl.npmrl, cTempl.nphmgt];
 	}
 
 	var lim = useHeavyReinforcement ? heavyAttackerLimit : lightAttackerLimit;
@@ -200,6 +200,13 @@ function eventStartLevel()
 	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
 	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
 
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaBunker", "A0BaBaBunkerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDHeavy", 7);
+	}
+
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggyheavy, SCAV_7);
@@ -246,7 +253,7 @@ function eventStartLevel()
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
 			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
-			templates: [ cTempl.npmrl, cTempl.npmmct, cTempl.nphmgt, cTempl.nppod ],
+			templates: [ cTempl.npmrl, cTempl.npmmct, cTempl.nphmgt, cTempl.npltat ],
 			data: {
 				regroup: false,
 				repair: 40,

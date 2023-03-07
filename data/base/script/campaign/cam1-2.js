@@ -4,8 +4,9 @@ include("script/campaign/templates.js");
 
 const SCAVENGER_RES = [
 	"R-Wpn-Flamer-Damage02", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
-	"R-Wpn-MG-Damage02", "R-Wpn-MG-ROF01", "R-Wpn-Mortar-Damage02",
-	"R-Wpn-Mortar-ROF01", "R-Wpn-Rocket-ROF03",
+	"R-Wpn-MG-Damage01", "R-Wpn-MG-ROF01", "R-Wpn-Mortar-Damage02",
+	"R-Wpn-Mortar-ROF01", "R-Wpn-Rocket-ROF03", "R-Defense-WallUpgrade02",
+        "R-Struc-Materials02",
 ];
 
 function exposeNorthBase()
@@ -77,6 +78,13 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
 
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaBunker", "A0BaBaBunkerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDHeavy", 7);
+	}
+
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.triketwin, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggytwin, SCAV_7);
@@ -104,7 +112,7 @@ function eventStartLevel()
 	camDetectEnemyBase("ScavLabGroup");
 
 	camSetArtifacts({
-		"ScavLab": { tech: ["R-Wpn-Mortar01Lt", "R-Wpn-Flamer-Damage02"] },
+		"ScavLab": { tech: "R-Wpn-Mortar01Lt" },
 		"NorthFactory": { tech: ["R-Vehicle-Prop-Halftracks", "R-Wpn-Cannon1Mk1"] },
 	});
 

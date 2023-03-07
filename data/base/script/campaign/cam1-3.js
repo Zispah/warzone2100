@@ -6,10 +6,10 @@ include("script/campaign/templates.js");
 
 const NEW_PARADIGM_RES = [
 	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
-	"R-Sys-Engineering01", "R-Wpn-MG-Damage03", "R-Wpn-MG-ROF01", "R-Wpn-Cannon-Damage01",
-	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
+	"R-Sys-Engineering01", "R-Wpn-MG-Damage03", "R-Wpn-MG-ROF01",
+	"R-Wpn-Flamer-Damage02", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
 	"R-Defense-WallUpgrade02","R-Struc-Materials02", "R-Vehicle-Engine01",
-	"R-Struc-RprFac-Upgrade01", "R-Wpn-Rocket-Damage01", "R-Wpn-Rocket-ROF02",
+	"R-Struc-RprFac-Upgrade01", "R-Wpn-Rocket-ROF03",
 	"R-Wpn-Mortar-Damage02", "R-Wpn-Mortar-ROF01",
 ];
 const SCAVENGER_RES = [
@@ -223,6 +223,13 @@ function eventStartLevel()
 	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
 
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaBunker", "A0BaBaBunkerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDHeavy", 7);
+	}
+
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, 7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, 7);
 	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggyheavy, 7);
@@ -282,7 +289,7 @@ function eventStartLevel()
 			groupSize: 4, // sic! scouts, at most
 			maxSize: 20,
 			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
-			templates: [ cTempl.nppod, cTempl.nphmg, cTempl.npsmc, cTempl.npsmc ]
+			templates: [ cTempl.nppod, cTempl.nphmg, cTempl.nphmg, cTempl.npsmc ]
 		},
 		"ScavFactorySouth": {
 			assembly: "ScavAssemblySouth",

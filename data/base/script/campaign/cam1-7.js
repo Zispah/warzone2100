@@ -273,16 +273,26 @@ function eventStartLevel()
 	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
 	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
 
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaBunker", "A0BaBaBunkerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerHeavy", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDHeavy", 7);
+	}
+
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggyheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.bjeep, cTempl.bjeepheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.rbjeep, cTempl.rbjeep8, SCAV_7);
 
-	// New MRA Mantis Tracks units on the hill
-	addDroid(NEW_PARADIGM, 29, 16, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
-	addDroid(NEW_PARADIGM, 29, 17, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
-	addDroid(NEW_PARADIGM, 29, 18, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
+	if (difficulty >= HARD)
+	{
+		// New MRA Mantis Tracks units on the hill
+		addDroid(NEW_PARADIGM, 29, 16, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
+		addDroid(NEW_PARADIGM, 29, 17, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
+		addDroid(NEW_PARADIGM, 29, 18, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
+	}
 
 	camSetEnemyBases({
 		"ScavMiddleGroup": {
@@ -347,5 +357,5 @@ function eventStartLevel()
 	buildLancers();
 
 	hackAddMessage("C1-7_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false); //Canyon
-	queue("startArtifactCollection", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
+	queue("startArtifactCollection", camChangeOnDiff(camMinutesToMilliseconds(2)));
 }

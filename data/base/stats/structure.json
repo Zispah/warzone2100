@@ -25,7 +25,7 @@
 		"buildPower": 100,
 		"ecmID": "ZNULLECM",
 		"height": 1,
-		"hitpoints": 300,
+		"hitpoints": 250,
 		"id": "A0BaBaBunker",
 		"name": "Scavenger Bunker",
 		"resistance": 150,
@@ -37,7 +37,30 @@
 		"thermal": 12,
 		"type": "DEFENSE",
 		"weapons": [
-			"MG3-Tower"
+			"BabaTowerTwinMG"
+		],
+		"width": 1
+	},
+        "A0BaBaBunkerHeavy": {
+		"armour": 12,
+		"breadth": 1,
+		"buildPoints": 10,
+		"buildPower": 100,
+		"ecmID": "ZNULLECM",
+		"height": 1,
+		"hitpoints": 250,
+		"id": "A0BaBaBunkerHeavy",
+		"name": "Scavenger Bunker Heavy",
+		"resistance": 150,
+		"sensorID": "DefaultSensor1Mk1",
+		"strength": "BUNKER",
+		"structureModel": [
+			"blbrbbnk.PIE"
+		],
+		"thermal": 12,
+		"type": "DEFENSE",
+		"weapons": [
+			"BabaTowerHeavyMG"
 		],
 		"width": 1
 	},
@@ -70,10 +93,10 @@
 		"buildPower": 100,
 		"ecmID": "ZNULLECM",
 		"height": 2,
-		"hitpoints": 150,
+		"hitpoints": 100,
 		"id": "A0BaBaFlameTower",
 		"name": "Scavenger Flame Tower",
-		"resistance": 150,
+		"resistance": 100,
 		"sensorID": "DefaultSensor1Mk1",
 		"strength": "MEDIUM",
 		"structureModel": [
@@ -93,10 +116,10 @@
 		"buildPower": 100,
 		"ecmID": "ZNULLECM",
 		"height": 2,
-		"hitpoints": 150,
+		"hitpoints": 75,
 		"id": "A0BaBaGunTower",
 		"name": "Scavenger Gun Tower",
-		"resistance": 150,
+		"resistance": 75,
 		"sensorID": "DefaultSensor1Mk1",
 		"strength": "MEDIUM",
 		"structureModel": [
@@ -116,10 +139,10 @@
 		"buildPower": 20,
 		"ecmID": "ZNULLECM",
 		"height": 2,
-		"hitpoints": 150,
+		"hitpoints": 75,
 		"id": "A0BaBaGunTowerEND",
 		"name": "*Scavenger End Tower*",
-		"resistance": 150,
+		"resistance": 75,
 		"sensorID": "DefaultSensor1Mk1",
 		"strength": "MEDIUM",
 		"structureModel": [
@@ -132,6 +155,98 @@
 		],
 		"width": 1
 	},
+	"A0BaBaGunTowerTwin": {
+		"armour": 7,
+		"breadth": 1,
+		"buildPoints": 10,
+		"buildPower": 100,
+		"ecmID": "ZNULLECM",
+		"height": 2,
+		"hitpoints": 75,
+		"id": "A0BaBaGunTowerTwin",
+		"name": "Scavenger Gun Tower Twin",
+		"resistance": 75,
+		"sensorID": "DefaultSensor1Mk1",
+		"strength": "MEDIUM",
+		"structureModel": [
+			"BLBRBTW1.PIE"
+		],
+		"thermal": 7,
+		"type": "DEFENSE",
+		"weapons": [
+			"BabaTowerTwinMG"
+		],
+		"width": 1
+	},
+	"A0BaBaGunTowerENDTwin": {
+		"armour": 7,
+		"breadth": 1,
+		"buildPoints": 10,
+		"buildPower": 20,
+		"ecmID": "ZNULLECM",
+		"height": 2,
+		"hitpoints": 75,
+		"id": "A0BaBaGunTowerENDTwin",
+		"name": "*Scavenger End Tower Twin*",
+		"resistance": 75,
+		"sensorID": "DefaultSensor1Mk1",
+		"strength": "MEDIUM",
+		"structureModel": [
+			"Blbrbtw2.PIE"
+		],
+		"thermal": 7,
+		"type": "DEFENSE",
+		"weapons": [
+			"BabaTowerTwinMG"
+		],
+		"width": 1
+	},
+	"A0BaBaGunTowerHeavy": {
+		"armour": 7,
+		"breadth": 1,
+		"buildPoints": 10,
+		"buildPower": 100,
+		"ecmID": "ZNULLECM",
+		"height": 2,
+		"hitpoints": 75,
+		"id": "A0BaBaGunTowerHeavy",
+		"name": "Scavenger Gun Tower Heavy",
+		"resistance": 75,
+		"sensorID": "DefaultSensor1Mk1",
+		"strength": "MEDIUM",
+		"structureModel": [
+			"BLBRBTW1.PIE"
+		],
+		"thermal": 7,
+		"type": "DEFENSE",
+		"weapons": [
+			"BabaTowerHeavyMG"
+		],
+		"width": 1
+	},
+	"A0BaBaGunTowerENDHeavy": {
+		"armour": 7,
+		"breadth": 1,
+		"buildPoints": 10,
+		"buildPower": 20,
+		"ecmID": "ZNULLECM",
+		"height": 2,
+		"hitpoints": 75,
+		"id": "A0BaBaGunTowerENDHeavy",
+		"name": "*Scavenger End Tower Heavy*",
+		"resistance": 75,
+		"sensorID": "DefaultSensor1Mk1",
+		"strength": "MEDIUM",
+		"structureModel": [
+			"Blbrbtw2.PIE"
+		],
+		"thermal": 7,
+		"type": "DEFENSE",
+		"weapons": [
+			"BabaTowerHeavyMG"
+		],
+		"width": 1
+	},
 	"A0BaBaHorizontalWall": {
 		"armour": 7,
 		"breadth": 1,
@@ -139,7 +254,7 @@
 		"buildPower": 10,
 		"ecmID": "ZNULLECM",
 		"height": 2,
-		"hitpoints": 100,
+		"hitpoints": 50,
 		"id": "A0BaBaHorizontalWall",
 		"name": "Scavenger Horizontal Wall",
 		"sensorID": "BaBaSensor",
@@ -249,7 +364,7 @@
 		"buildPower": 20,
 		"ecmID": "ZNULLECM",
 		"height": 2,
-		"hitpoints": 100,
+		"hitpoints": 50,
 		"id": "A0BabaCornerWall",
 		"name": "Scavenger CornerWall",
 		"sensorID": "ZNULLSENSOR",
@@ -1576,7 +1691,7 @@
 		"height": 2,
 		"hitpoints": 250,
 		"id": "GuardTower3",
-		"name": "Steel Heavy Machinegun Guard Tower",
+		"name": "Heavy Machinegun Guard Tower",
 		"resistance": 150,
 		"sensorID": "DefaultSensor1Mk1",
 		"strength": "MEDIUM",

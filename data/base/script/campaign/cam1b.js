@@ -4,7 +4,7 @@ include("script/campaign/templates.js");
 
 var NPScout; // Sensor scout
 const SCAVENGER_RES = [
-	"R-Wpn-Flamer-Damage01", "R-Wpn-Flamer-Range01", "R-Wpn-MG-Damage01", "R-Wpn-MG-ROF01",
+	"R-Wpn-Flamer-Damage01", "R-Wpn-MG-Damage01",
 ];
 
 camAreaEvent("AttackArea1", function(droid)
@@ -78,7 +78,7 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	camSetMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
+	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
 	setAlliance(NEW_PARADIGM, SCAV_6, true);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
 	setAlliance(SCAV_6, SCAV_7, true);
@@ -86,9 +86,17 @@ function eventStartLevel()
 	camCompleteRequiredResearch(SCAVENGER_RES, 6);
 	camCompleteRequiredResearch(SCAVENGER_RES, 7);
 
+        if (difficulty >= HARD)
+	{
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerTwin", 6);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDTwin", 6); 
+		camUpgradeOnMapStructures("A0BaBaGunTower", "A0BaBaGunTowerTwin", 7);
+		camUpgradeOnMapStructures("A0BaBaGunTowerEND", "A0BaBaGunTowerENDTwin", 7);
+	}
+
 	camSetArtifacts({
 		"base1factory": { tech: "R-Wpn-Flamer-Damage01" },
-		"base2factory": { tech: "R-Wpn-MG2Mk1" },
+		"base2factory": { tech: "R-Wpn-MG-ROF01" },
 		"base3sensor": { tech: "R-Sys-Sensor-Turret01" },
 		"base4gen": { tech: "R-Struc-PowerModuleMk1" },
 	});
@@ -153,7 +161,7 @@ function eventStartLevel()
 			groupSize: 8,
 			maxSize: 8,
 			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty <= MEDIUM) ? 16 : 12)),
-			templates: [ cTempl.trike, cTempl.bloketwin, cTempl.buggytwin, cTempl.bjeeptwin ]
+			templates: [ cTempl.triketwin, cTempl.bloketwin, cTempl.buggytwin, cTempl.bjeeptwin ]
 		},
 	});
 	camEnableFactory("base2factory");

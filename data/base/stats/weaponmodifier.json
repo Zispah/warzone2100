@@ -2,7 +2,7 @@
 	"ALL ROUNDER": {
 		"Half-Tracked": 105,
 		"Hover": 100,
-		"Legged": 60,
+		"Legged": 80,
 		"Lift": 100,
 		"Tracked": 95,
 		"Wheeled": 110
@@ -10,7 +10,7 @@
 	"ANTI PERSONNEL": {
 		"Half-Tracked": 65,
 		"Hover": 100,
-		"Legged": 120,
+		"Legged": 130,
 		"Lift": 25,
 		"Tracked": 50,
 		"Wheeled": 100
@@ -32,12 +32,12 @@
 		"Wheeled": 110
 	},
 	"BUNKER BUSTER": {
-		"Half-Tracked": 33,
-		"Hover": 33,
-		"Legged": 33,
-		"Lift": 33,
-		"Tracked": 33,
-		"Wheeled": 33
+		"Half-Tracked": 55,
+		"Hover": 55,
+		"Legged": 55,
+		"Lift": 55,
+		"Tracked": 55,
+		"Wheeled": 55
 	},
 	"FLAMER": {
 		"Half-Tracked": 75,

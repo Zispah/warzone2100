@@ -323,12 +323,12 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"COCommandCenter": { tech: "R-Sys-Engineering02" },
-		"COArtiPillbox": { tech: "R-Wpn-MG-ROF02" },
+		"COArtiPillbox": { tech: "R-Wpn-MG-Damage05" },
 		"COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
 	});
 
-	camSetMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
-	setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
+	setMissionTime(camChangeOnDiff(camMinutesToSeconds(40)));
+	setPower(camChangeOnDiff(PLAYER_POWER), CAM_HUMAN_PLAYER);
 	cam2Setup();
 
 	//C2A_BASE2 is not really a base

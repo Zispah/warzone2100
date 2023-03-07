@@ -5,9 +5,19 @@ const PLAYER_RES = [
 	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
 ];
 
-const SCAVENGER_RES = [
-	"R-Wpn-MG-Damage01", "R-Wpn-MG-ROF01",
-];
+let SCAVENGER_RES;
+
+if (difficulty < HARD)
+{
+	SCAVENGER_RES = [
+	];
+}
+else
+{
+	SCAVENGER_RES = [
+		"R-Wpn-Flamer-Damage01",
+	];
+}
 
 // Player zero's droid enters area next to first oil patch.
 camAreaEvent("launchScavAttack", function(droid)
@@ -23,7 +33,7 @@ camAreaEvent("launchScavAttack", function(droid)
 	// Activate mission timer, unlike the original campaign.
 	if (difficulty !== HARD && difficulty !== INSANE)
 	{
-		camSetMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
+		setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
 	}
 });
 
@@ -140,18 +150,7 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	if (difficulty === HARD)
-	{
-		setPower(600, CAM_HUMAN_PLAYER);
-	}
-	else if (difficulty === INSANE)
-	{
-		setPower(300, CAM_HUMAN_PLAYER);
-	}
-	else
-	{
-		setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
-	}
+	setPower(camChangeOnDiff(PLAYER_POWER), CAM_HUMAN_PLAYER);
 
 	setAlliance(SCAV_6, SCAV_7, true);
 
@@ -164,11 +163,11 @@ function eventStartLevel()
 	camPlayVideos({video: "CMB1_MSG", type: CAMP_MSG, immediate: false});
 	if (difficulty === HARD)
 	{
-		camSetMissionTime(camMinutesToSeconds(40));
+		setMissionTime(camMinutesToSeconds(40));
 	}
 	else if (difficulty === INSANE)
 	{
-		camSetMissionTime(camMinutesToSeconds(30));
+		setMissionTime(camMinutesToSeconds(30));
 	}
 	else
 	{
@@ -204,10 +203,9 @@ function eventStartLevel()
 	});
 
 	camSetArtifacts({
-		"base1ArtifactPos": { tech: "R-Sys-Engineering01" },
-		"base2Factory": { tech: ["R-Wpn-Flamer01Mk1", "R-Sys-MobileRepairTurret01"] },
-		"base3Factory": { tech: "R-Wpn-MG-Damage01" },
-		"base4Factory": { tech: "R-Wpn-MG-ROF01" },
+		"base1ArtifactPos": { tech: "R-Wpn-MG-Damage01" },
+		"base2Factory": { tech: "R-Wpn-Flamer01Mk1" },
+		"base3Factory": { tech: "R-Sys-Engineering01" },
 	});
 
 	camSetFactories({

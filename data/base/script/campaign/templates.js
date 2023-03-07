@@ -25,15 +25,15 @@ bjeepheavy: { body: "B2JeepBody", prop: "BaBaProp", weap: "BabaJeepHeavyMG" },
 rbjeep8: { body: "B2RKJeepBody", prop: "BaBaProp", weap: "BabaRocket8" },
 rbjeep: { body: "B2RKJeepBody", prop: "BaBaProp", weap: "BabaRocket" },
 rbuggy: { body: "B3bodyRKbuggy01", prop: "BaBaProp", weap: "BabaRocket" },
-nppod: { body: "Body4ABT", prop: "wheeled01", weap: "Rocket-Pod" },
+nppod: { body: "Body4ABT", prop: "HalfTrack", weap: "Rocket-Pod" },
 npblc: { body: "Body4ABT", prop: "HalfTrack", weap: "Cannon1Mk1" },
-nphmg: { body: "Body4ABT", prop: "HalfTrack", weap: "MG3Mk1" },
+nphmg: { body: "Body4ABT", prop: "HalfTrack", weap: "MG3-NP" },
 npsmc: { body: "Body8MBT", prop: "HalfTrack", weap: "Cannon2A-TMk1" },
 buscan: { body: "BusBody", prop: "BaBaProp", weap: "BabaBusCannon" },
 firecan: { body: "FireBody", prop: "BaBaProp", weap: "BabaBusCannon" },
 
 // CAM_1C
-npsens: { body: "Body4ABT", prop: "wheeled01", weap: "SensorTurret1Mk1" },
+npsens: { body: "Body4ABT", prop: "HalfTrack", weap: "SensorTurret1Mk1" },
 npslc: { body: "Body8MBT", prop: "HalfTrack", weap: "Cannon1Mk1" },
 npmor: { body: "Body8MBT", prop: "HalfTrack", weap: "Mortar1Mk1" },
 npsmct: { body: "Body8MBT", prop: "tracked01", weap: "Cannon2A-TMk1" },
@@ -47,7 +47,7 @@ npltat: { body: "Body4ABT", prop: "HalfTrack", weap: "Rocket-LtA-T" },
 // SUB_1_4A
 
 // CAM_1_5
-nphmgt: { body: "Body8MBT", prop: "tracked01", weap: "MG3Mk1" },
+nphmgt: { body: "Body8MBT", prop: "tracked01", weap: "MG3-NP" },
 npcybc: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgCannon" },
 npcybf: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgFlamer01" },
 npcybm: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgChaingun" },
@@ -61,8 +61,9 @@ npmsens: { body: "Body8MBT", prop: "HalfTrack", weap: "SensorTurret1Mk1" },
 
 // CAM_1_D
 npcybr: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgRocket" },
-nphmgh: { body: "Body8MBT", prop: "hover01", weap: "MG3Mk1" },
+nphmgh: { body: "Body8MBT", prop: "hover01", weap: "MG3-NP" },
 npltath: { body: "Body8MBT", prop: "hover01", weap: "Rocket-LtA-T" },
+npltatt: { body: "Body8MBT", prop: "tracked01", weap: "Rocket-LtA-T" },
 nphch: { body: "Body12SUP", prop: "hover01", weap: "Cannon375mmMk1" },
 nphbb: { body: "Body12SUP", prop: "hover01", weap: "Rocket-BB" },
 
@@ -72,12 +73,12 @@ comsens: { body: "Body6SUPP", prop: "tracked01", weap: "SensorTurret1Mk1" },
 cohct: { body: "Body9REC", prop: "tracked01", weap: "Cannon375mmMk1" },
 commc: { body: "Body6SUPP", prop: "tracked01", weap: "Cannon2A-TMk1" },
 commrl: { body: "Body6SUPP", prop: "HalfTrack", weap: "Rocket-MRL" },
-commrp: { body: "Body6SUPP", prop: "tracked01", weap: "Rocket-Pod" },
+commrp: { body: "Body6SUPP", prop: "tracked01", weap: "Rocket-LtA-T" },
 comorb: { body: "Body6SUPP", prop: "HalfTrack", weap: "Mortar2Mk1" },
 colcbv: { body: "Body2SUP", prop: "V-Tol", weap: "Bomb1-VTOL-LtHE" },
 prhct: { body: "Body11ABT", prop: "tracked01", weap: "Cannon375mmMk1" },
-prltat: { body: "Body5REC", prop: "tracked01", weap: "Rocket-LtA-T" },
-prrept: { body: "Body5REC", prop: "tracked01", weap: "LightRepair1" },
+prltat: { body: "Body11ABT", prop: "HalfTrack", weap: "Rocket-LtA-T" },
+prrept: { body: "Body5REC", prop: "HalfTrack", weap: "LightRepair1" },
 
 // SUB_2_1
 
@@ -130,7 +131,7 @@ nxmtherv: { body: "Body7ABT", prop: "V-Tol02", weap: "Bomb4-VTOL-HvyINC" },
 prhasgnt: { body: "Body11ABT", prop: "tracked01", weap: "MG4ROTARYMk1" },
 prhhpvt: { body: "Body11ABT", prop: "tracked01", weap: "Cannon4AUTOMk1" },
 prhaacnt: { body: "Body11ABT", prop: "tracked01", weap: "AAGun2Mk1" },
-prtruck: { body: "Body5REC", prop: "tracked01", weap: "Spade1Mk1" },
+prtruck: { body: "Body5REC", prop: "HalfTrack", weap: "Spade1Mk1" },
 
 // SUB_3_1
 nxcylas: { body: "CybNXPulseLasJmp", prop: "CyborgLegs02", weap: "NX-CyborgPulseLas" },
@@ -164,3 +165,27 @@ nxmpulsev: { body: "Body7ABT", prop: "V-Tol02", weap: "Laser2PULSE-VTOL" },
 
 ////////////////////////////////////////////////////////////////////////////////
 };
+
+
+if (difficulty < HARD)
+{
+	cTempl.bloketwin = { body: "B1BaBaPerson01", prop: "BaBaLegs", weap: "BabaMG" };
+	cTempl.triketwin = { body: "B4body-sml-trike01", prop: "BaBaProp", weap: "BabaTrikeMG" };
+	cTempl.buggytwin = { body: "B3body-sml-buggy01", prop: "BaBaProp", weap: "BabaBuggyMG" };
+	cTempl.bjeeptwin = { body: "B2JeepBody", prop: "BaBaProp", weap: "BabaJeepMG" };
+	
+	cTempl.blokeheavy = { body: "B1BaBaPerson01", prop: "BaBaLegs", weap: "BabaMG" };
+	cTempl.trikeheavy = { body: "B4body-sml-trike01", prop: "BaBaProp", weap: "BabaTrikeMG" };
+	cTempl.buggyheavy = { body: "B3body-sml-buggy01", prop: "BaBaProp", weap: "BabaBuggyMG" };
+	cTempl.bjeepheavy = { body: "B2JeepBody", prop: "BaBaProp", weap: "BabaJeepMG" };
+
+	cTempl.npsens = { body: "Body4ABT", prop: "wheeled01", weap: "SensorTurret1Mk1" };
+	cTempl.nppod = { body: "Body4ABT", prop: "wheeled01", weap: "Rocket-Pod" };
+	cTempl.nphmg = { body: "Body4ABT", prop: "HalfTrack", weap: "MG3Mk1" };
+
+	cTempl.npltat = { body: "Body4ABT", prop: "wheeled01", weap: "Rocket-LtA-T" };
+
+	cTempl.nphmgt = { body: "Body8MBT", prop: "tracked01", weap: "MG3Mk1" };
+
+	cTempl.nphmgh = { body: "Body8MBT", prop: "hover01", weap: "MG3Mk1" };
+}

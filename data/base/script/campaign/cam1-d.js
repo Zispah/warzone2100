@@ -225,7 +225,7 @@ function eventStartLevel()
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.npltat, cTempl.npmsens, cTempl.npmorb, cTempl.npsmct, cTempl.nphct ] //variety
+			templates: [ cTempl.npltatt, cTempl.npmsens, cTempl.npmorb, cTempl.npsmct, cTempl.nphct ] //variety
 		},
 		"NPFactoryNE": {
 			assembly: "NPFactoryNEAssembly",
@@ -237,7 +237,7 @@ function eventStartLevel()
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.nphct, cTempl.npsbb, cTempl.npmorb ] //tough units
+			templates: [ cTempl.nphct, cTempl.npltatt, cTempl.npsbb, cTempl.npmorb ] //tough units
 		},
 		"NPCybFactoryW": {
 			assembly: "NPCybFactoryWAssembly",
